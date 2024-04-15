@@ -180,13 +180,16 @@ int main() {
     while(scanf("%d %d", &t, &x) != EOF){
         if(t < numVertices && x < numVertices) {
             inicio = clock();
-            if((search(&grafo, t, x) == true) && search(&grafo, x, t) == true) {
+            bool ida,volta;
+            ida = search(&grafo, t, x);
+            volta = search(&grafo, x, t);
+            if(ida && volta) {
                 printf("Ida e volta\n");
             }
-            else if(search(&grafo, t, x) == true) {
+            else if(ida) {
                 printf("Apenas ida\n");
             }
-            else if(search(&grafo, x, t) == true) {
+            else if(volta) {
                 printf("Apenas volta\n");
             }
             else {
