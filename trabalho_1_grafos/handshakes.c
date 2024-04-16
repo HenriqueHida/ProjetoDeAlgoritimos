@@ -3,17 +3,21 @@ Como o exemplo usado em sala, o exercicio quer calcular quando apertos de mãos 
 duas pessoas se encontrem. É feito a partir do algoritimo Djikstra que usa uma fila de prioridade para
 exploração do grafo
 exemplo de input:
-Alice Bob
-5 4
-Alice
-Bob
-Charlie
-David
-Eve
-Alice Charlie
-Charlie Bob
-Bob David
-David Eve
+Joao Maria
+7 6
+Joao
+Maria
+Carlos
+Ana
+Pedro
+Luiza
+Roberto
+Joao Carlos
+Carlos Pedro
+Pedro Roberto
+Roberto Maria
+Maria Ana
+Ana Luiza
 
 primeiro é passado o nome inicial e o objetivo, o número de pessoas e suas conexões, depois o nome de cada
 pessoa e por fim suas conexões, o programa retorna o número de apertos de mão necessários para que as duas pessoas
@@ -89,6 +93,7 @@ void dijkstra(int src) {
         }
     }
 }
+
 
 int main() {
     scanf("%s %s", S, E);

@@ -3,10 +3,10 @@ Código em C para verificar se existe um caminho entre dois nós em um grafo dir
 Exemplo de input para teste:
 5
 2
-0 1 1
-1 2 1
-2 3 1
+0 1 2
+1 2 2
 3 4 1
+2 4 1
 0 0 0
 0 4
 1 3
@@ -17,6 +17,28 @@ no grafo será usada (BFS ou DFS), logo em seguida são adicionados as arestas
 num formato (aresta1 aresta2 direção), sendo que essa direção pode ser 1 (apenas ida) ou 2 (ida e volta).
 e por fim são passados os nós que se deseja verificar se existe um caminho entre eles. O programa também
 retorna o tempo de execução a fins de teste entre a bfs e dfs.
+
+exemplo apenas de criação de grafo com 20 nós:
+0 5 2
+1 7 1
+2 8 2
+3 10 1
+4 13 2
+5 14 1
+6 15 2
+7 16 1
+8 17 2
+9 18 1
+10 19 1
+11 0 2
+12 1 1
+13 2 2
+14 3 1
+15 4 2
+16 6 1
+17 9 2
+18 11 1
+19 12 2
 */
 
 
@@ -35,12 +57,6 @@ typedef struct Grafo {
     int** matriz;
     int numVertices;
 } Grafo;
-
-typedef struct {
-    int* data;
-    int length;
-    int capacity;
-} PriorityQueue;
 
 // Ponteiro de função para a escolha da busca
 typedef bool (*SearchFunction)(Grafo*, int, int);
@@ -204,3 +220,4 @@ int main() {
         }
     }
 }
+
