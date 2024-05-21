@@ -28,6 +28,9 @@ se encontrem
 #include <string.h>
 #include <stdlib.h>
 
+
+
+
 #define MAXN 1005
 #define INF 0x3f3f3f3f
 
